@@ -168,7 +168,7 @@ export default function HomePage() {
   const xShareUrl = `https://twitter.com/intent/tweet?text=${xShareText}`;
 
   return (
-    <main className="min-h-screen" style={{ background: "linear-gradient(135deg, #0D1117 0%, #1a1a2e 50%, #16213e 100%)" }}>
+    <main className="min-h-screen" style={{ background: "radial-gradient(ellipse at 20% 0%, rgba(255,107,107,0.08) 0%, transparent 50%), radial-gradient(ellipse at 80% 100%, rgba(255,107,174,0.06) 0%, transparent 50%), radial-gradient(ellipse at 50% 50%, rgba(22,33,62,0.8) 0%, transparent 70%), linear-gradient(135deg, #0D1117 0%, #1a1a2e 50%, #16213e 100%)" }}>
       {/* ヒーローセクション */}
       <section className="relative overflow-hidden pt-20 pb-24 px-4">
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -180,15 +180,27 @@ export default function HomePage() {
             className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full opacity-10 blur-3xl"
             style={{ background: "radial-gradient(circle, #FF6BAE, transparent)" }}
           />
+          {/* Floating particles */}
+          {[
+            { l: "8%", t: "15%", s: 4, d: "0s", c: "rgba(255,107,107,0.35)" },
+            { l: "20%", t: "70%", s: 3, d: "1.2s", c: "rgba(255,107,174,0.3)" },
+            { l: "65%", t: "25%", s: 5, d: "2.4s", c: "rgba(255,107,107,0.25)" },
+            { l: "80%", t: "65%", s: 3, d: "0.8s", c: "rgba(255,107,174,0.35)" },
+            { l: "45%", t: "10%", s: 4, d: "3s", c: "rgba(255,107,107,0.2)" },
+            { l: "55%", t: "85%", s: 3, d: "1.6s", c: "rgba(255,107,174,0.25)" },
+            { l: "90%", t: "40%", s: 3, d: "2.8s", c: "rgba(255,107,107,0.3)" },
+          ].map((p, i) => (
+            <div key={i} className="absolute rounded-full animate-pulse" style={{ left: p.l, top: p.t, width: p.s, height: p.s, backgroundColor: p.c, animationDelay: p.d, animationDuration: "5s" }} />
+          ))}
         </div>
         <div className="relative max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-6 backdrop-blur-md bg-white/5 border border-white/10 text-pink-300">
             <span>TikTok / YouTube Shorts / Instagram Reels 対応</span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight" style={{ filter: "drop-shadow(0 0 20px rgba(255,107,107,0.15))" }}>
             60秒で生まれる
             <br />
-            <span style={{ background: "linear-gradient(90deg, #FF6B6B, #FF6BAE)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+            <span style={{ background: "linear-gradient(90deg, #FF6B6B, #FF6BAE, #FF8E53)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
               バズるドラマ台本
             </span>
           </h1>
@@ -200,7 +212,7 @@ export default function HomePage() {
               href="/tool"
               aria-label="無料で台本を生成する"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-bold text-white text-lg min-h-[56px] transition-all hover:scale-105"
-              style={{ background: "linear-gradient(135deg, #FF6B6B, #FF6BAE)" }}
+              style={{ background: "linear-gradient(135deg, #FF6B6B, #FF6BAE)", boxShadow: "0 0 30px rgba(255,107,107,0.35), 0 4px 15px rgba(0,0,0,0.3)" }}
             >
               無料で台本を生成する
               <IconChevronRight />
@@ -223,7 +235,7 @@ export default function HomePage() {
       {/* 特徴カード */}
       <section className="py-20 px-4" aria-labelledby="features-heading">
         <div className="max-w-5xl mx-auto">
-          <h2 id="features-heading" className="text-3xl font-bold text-center text-white mb-12">
+          <h2 id="features-heading" className="text-3xl font-bold text-center mb-12" style={{ background: "linear-gradient(90deg, #FFFFFF, #FF6BAE)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
             選ばれる3つの理由
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
@@ -244,7 +256,7 @@ export default function HomePage() {
       {/* 使い方3ステップ */}
       <section className="py-20 px-4" aria-labelledby="howto-heading">
         <div className="max-w-4xl mx-auto">
-          <h2 id="howto-heading" className="text-3xl font-bold text-center text-white mb-12">
+          <h2 id="howto-heading" className="text-3xl font-bold text-center mb-12" style={{ background: "linear-gradient(90deg, #FFFFFF, #FF6BAE)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
             使い方は3ステップ
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -266,7 +278,7 @@ export default function HomePage() {
               href="/tool"
               aria-label="今すぐ台本を生成してみる"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-bold text-white text-lg min-h-[56px] transition-all hover:scale-105"
-              style={{ background: "linear-gradient(135deg, #FF6B6B, #FF6BAE)" }}
+              style={{ background: "linear-gradient(135deg, #FF6B6B, #FF6BAE)", boxShadow: "0 0 25px rgba(255,107,107,0.3), 0 4px 12px rgba(0,0,0,0.2)" }}
             >
               今すぐ試してみる
               <IconChevronRight />
@@ -278,7 +290,7 @@ export default function HomePage() {
       {/* FAQセクション */}
       <section className="py-20 px-4" aria-labelledby="faq-heading">
         <div className="max-w-3xl mx-auto">
-          <h2 id="faq-heading" className="text-3xl font-bold text-center text-white mb-12">
+          <h2 id="faq-heading" className="text-3xl font-bold text-center mb-12" style={{ background: "linear-gradient(90deg, #FFFFFF, #FF6BAE)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
             よくある質問
           </h2>
           <div className="space-y-4">

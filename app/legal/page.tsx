@@ -10,7 +10,7 @@ export default function LegalPage() {
     { label: "販売事業者名", value: "個人事業主（お問い合わせにて開示）" },
     { label: "代表者名", value: "お問い合わせにて開示" },
     { label: "所在地", value: "お問い合わせにて開示" },
-    { label: "電話番号", value: "お問い合わせにて開示（メール対応を優先しています）" },
+    { label: "電話番号", value: "非公開（お問い合わせいただいた場合は遅滞なく開示いたします）" },
     { label: "メールアドレス", value: "support@short-drama-script-ai.vercel.app" },
     { label: "サービス名", value: "ショートドラマ台本AI" },
     { label: "販売価格", value: "無料プラン：0円（3回まで）／プレミアムプラン：詳細は近日公開" },
