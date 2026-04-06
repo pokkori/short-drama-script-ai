@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   icons: {
-    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>",
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='8' y='28' width='84' height='55' rx='8' fill='%23374151'/><rect x='8' y='28' width='84' height='22' rx='4' fill='%231F2937'/><rect x='8' y='42' width='84' height='8' fill='%23111827'/><rect x='22' y='20' width='10' height='16' rx='2' fill='%23F59E0B' transform='rotate(-15 27 28)'/><rect x='44' y='16' width='10' height='16' rx='2' fill='%23F59E0B' transform='rotate(-15 49 24)'/><rect x='66' y='12' width='10' height='16' rx='2' fill='%23F59E0B' transform='rotate(-15 71 20)'/></svg>",
   },
   openGraph: {
     title: TITLE,
